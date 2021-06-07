@@ -1,0 +1,79 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+
+}
+
+
+.container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.c{
+    width: 200px;
+    height: 200px;
+    background: #f8da61;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 2em;
+}
+.c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    /*backface-visibility: hidden;*/
+}
+.front {
+    z-index: 2;
+    display: block;
+    /*backface-visibility: hidden;*/
+}
+
+.back {
+    z-index: 1;
+    display: none;
+    /*background: #f8da61;*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    border-radius: 10px;
+    text-align: center;
+
+}
+.c:hover{
+    transform: rotateY(180deg);
+    background: #f8da61;
+    /*backface-visibility: hidden;*/
+}
+.c:hover .back {
+    display: block;
+    transform: rotateY(180deg);
+
+
+}
+.c:hover .front {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+
+
+
+
+
+
+
